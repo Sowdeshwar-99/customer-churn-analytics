@@ -140,4 +140,5 @@ plt.title("Feature Importance - Random Forest")
 plt.xlabel("Importance Score")
 plt.show()
 df["Churn_Probability"] = rf_model.predict_proba(X)[:,1]
+
 df.to_csv("customer_churn_scores.csv", index=False)
