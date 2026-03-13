@@ -15,9 +15,7 @@ from sklearn.metrics import (
 SEED = 42
 np.random.seed(SEED)
 
-df = pd.read_excel(
-    r"E:\Australia\Fulltime_work\Data analyst\Banking dashboard\Churn_Modelling.xlsx"
-)
+df = pd.read_excel("data/Churn_Modelling.xlsx")
 
 print("Dataset Shape:", df.shape)
 print(df.head())
@@ -142,3 +140,4 @@ plt.show()
 df["Churn_Probability"] = rf_model.predict_proba(X)[:,1]
 
 df.to_csv("customer_churn_scores.csv", index=False)
+
